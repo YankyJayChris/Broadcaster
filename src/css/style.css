@@ -1,0 +1,287 @@
+/* ====== globle css ==== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    background-color: #F2EEE8;
+}
+
+input {
+  width: 100%;
+  padding: 8px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+h1{
+    font-size: 1.8rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1.2rem;
+}
+h4{
+    font-size: 0.9rem;
+}
+h5{
+    font-size: 0.6rem;
+}
+img{
+    width: 100%;
+}
+/* ============ common class =============== */
+.container{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn{
+    width: 100%;
+    background-color: #560764;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #fff;
+}
+
+.link{
+    color: #560764;
+    font-weight: 700;
+}
+.hide{
+    display: none;
+}
+.s-hide{
+    display: none;
+}
+.l-hide{
+    display: inline-block;
+}
+.form-field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.bag{
+    border-radius: 40%;
+    background-color: #fa2340;
+    color: #fff;
+    padding: 5px;
+}
+
+
+
+/* ========= login/sign up page ============== */
+
+.landing-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form,.signup-form,.forget-form{
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+.call-out{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.call-out p{
+    color: #333;
+    text-align: center;
+}
+/* ========= layout css ========*/
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: #fff;
+    border-bottom: 1px solid #560764;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    position: -webkit-sticky;
+    position: sticky;
+    top: -62px;
+    z-index: 10;
+    
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* height: 100vh; */
+}
+.sidebar{
+    display: inline-block;
+    width: 100%;
+    height: 30vh;
+    background-color: #fff;
+}
+.notifications{
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+}
+.center{
+    width: 100%;
+    height: 5000px;
+}
+
+
+/* ======== header css ================== */
+
+
+.brand-search{
+    flex: 2;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.brand{
+    flex:1;
+    display: none;
+
+}
+.search-form{
+    flex: 3;
+}
+
+
+.navbar{
+    flex: 1;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    width: 100%;
+    font-size: 18px; 
+    
+}
+.navbar li{
+    flex: 1;
+    display: inline-block;
+    padding: 8px 10px 8px 10px;
+    text-decoration: none;
+    color: #2b2b2b;
+    cursor: pointer;
+    text-align-last: center;
+    transition: 0.3s;
+}
+
+.navbar li:hover{
+    /* background-color: rgba(206, 75, 211, 0.6); */
+    background-color: #560764;
+    color: #fff;
+}
+
+.active{
+    background-color: #560764;
+    color: #560764;
+    
+}
+.not-icon{
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/* ===== media quer ================================================= */
+
+@media only screen and (min-width: 800px) {
+
+    /* ===== common class ====== */
+    .l-hide{
+        display: none;
+    }
+    .s-hide{
+        display: inline-block;
+    }
+
+    /* ===== layout ======= */
+    .content{
+        flex-direction: row;
+    }
+    .sidebar{
+        display: inline-block;
+        height: 100vh;
+        width: 20%;
+        background-color: #fff;
+    }
+
+    .notifications{
+        display: inline-block;
+        height: 100vh;
+        width: 20%;
+        background-color: #fff;
+    }
+    .center{
+        flex: 1;
+        height: 5000px;
+    }
+    /* ===navbar =====*/
+    .header{
+        flex-direction: row;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        height: 10%;
+    }
+    .brand{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    
+}
