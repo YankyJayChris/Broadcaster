@@ -1,7 +1,7 @@
-let Footer = {
-  render: async () => {
+let RedFlag = {
+  render: async (post) => {
     return /*html*/ `
-            <div class="card footer">
+            <div class="red-flag card">
                 
             </div>
         `;
@@ -10,4 +10,4 @@ let Footer = {
   events: async () => {}
 };
 
-export default Footer;
+export default RedFlag;

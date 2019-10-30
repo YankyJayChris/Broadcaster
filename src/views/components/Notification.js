@@ -1,13 +1,13 @@
-let Footer = {
+let Notification = {
   render: async () => {
     return /*html*/ `
-            <div class="card footer">
-                
-            </div>
+        <div class="notifications">
+        
+        </div>
         `;
   },
   // All the code related to DOM interactions and controls
   events: async () => {}
 };
 
-export default Footer;
+export default Notification;

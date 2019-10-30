@@ -1,3 +1,5 @@
+import Utils from './../../services/Utils.js';
+
 let Register = {
 
     render: async () => {
@@ -68,9 +70,9 @@ let Register = {
                             placeholder="confirm password"
                             />
                         </div>
-                        <input class="btn sign-up-btn" type="submit" value="Submit" />
+                        <button class="btn sign-up-btn full-width">Sign up</button>
                         <div class="call-out">
-                            <span>have an account? <a href="#" class="link login-link">Log in</a></span>
+                            <span>have an account? <a href="/#/" class="link login-link">Log in</a></span>
                         </div>
                     </form>
                 </div>
@@ -81,11 +83,11 @@ let Register = {
     events: async () => { 
         document.querySelector(".login-link").addEventListener("click", e => {
           e.preventDefault();
-          window.location.href = "/#/";
+          Utils.routeTo("/");
         });
         document.querySelector(".sign-up-btn").addEventListener("click", e => {
           e.preventDefault();
-          window.location.href = "/#/";
+          Utils.routeTo('/')
         });
     }
 }
