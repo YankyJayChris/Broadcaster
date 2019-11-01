@@ -4,6 +4,7 @@ import Forget from "./views/pages/Forget.js";
 import Error404 from "./views/pages/Error404.js";
 import Home from './views/pages/Home.js';
 import Feed from './views/pages/Feed.js';
+import Admin from './views/pages/Admin.js';
 
 // import components
 import Header from "./views/components/Header.js";
@@ -17,7 +18,8 @@ const routes = {
   "/forget": Forget,
   "/red-flag/:id":RedFlag,
   "/home": Home,
-  "/feed": Feed
+  "/feed": Feed,
+  "/admin": Admin
 };
 
 
@@ -29,22 +31,19 @@ const router = async () => {
     console.log(request);
     // App contener
     const appContent = document.getElementById("app");
+    appContent.innerHTML = "";
+    // getting conteners in the html
+    const header = document.getElementById("app_header");
+    const footer = document.getElementById("app_footer");
 
     // Parse the URL and if it has an id part, change it with the string ":id"
     let parsedURL = `${request.resource ? '/' + request.resource : '/'}${request.id ? '/:id' : ''}${request.verb ? '/' + request.verb : ''}`;
 
-    if(parsedURL == "/" || parsedURL == "/register" || parsedURL == "/forget"){
-        document.getElementById("app_header").classList.add("hide");
-        document.getElementById("app_footer").classList.add("hide");
-
+    if(parsedURL == "/" || parsedURL == "" || parsedURL == "/register" || parsedURL == "/forget"){
+        header.classList.add("hide");
+        footer.classList.add("hide");
+        header.innerHTML = "";
     }else{
-
-        document.getElementById("app_header").classList.remove("hide");
-        document.getElementById("app_footer").classList.remove("hide");
-        
-        // getting conteners in the html
-        const header = document.getElementById("app_header");
-        const footer = document.getElementById("app_footer");
 
         // Render the Header of the page
         header.innerHTML = await Header.render();
@@ -54,7 +53,7 @@ const router = async () => {
     
     
     
-    // checking if parsedURL is supported and add to the dom the correct component
+    // checking if route is supported and add to the dom the correct component
     let page = routes[parsedURL] ? routes[parsedURL] : Error404
     // console.log(page);
     appContent.innerHTML = await page.render();

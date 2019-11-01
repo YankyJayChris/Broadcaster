@@ -87,7 +87,7 @@ let Register = {
         });
         document.querySelector(".sign-up-btn").addEventListener("click", e => {
           e.preventDefault();
-          Utils.routeTo('/')
+          Utils.routeTo('/home');
         });
     }
 }

@@ -14,7 +14,7 @@ let Header = {
                     </div>
                     <div class="not-icon l-hide">
                         <i class="far fa-bell"></i>
-                        <span class="bag-danger">10</span>
+                        
                     </div>
                 </div>
                 <nav class="navbar">

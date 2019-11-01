@@ -25,6 +25,9 @@ const Utils = {
   },
   routeTo:(route) =>{
     window.location.href = `/#${route}`;
+  },
+  isLoged:() =>{
+    return false
   }
  
  

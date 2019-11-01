@@ -11,14 +11,14 @@
 
 body{
     font-family: 'Lato', sans-serif;
-    width: 100%;
     background-color: #F2EEE8;
     color: rgb(65, 63, 63);
 }
 
+
 input {
   width: 100%;
-  padding: 8px 20px;
+  padding: 8px 10px;
   margin: 5px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -32,15 +32,14 @@ input:focus{
 textarea{
     width: 100%;
     height: 100px;
-    padding: 8px 20px;
+    padding: 8px 10px;
     margin: 5px 0;
     border: none;
     font-size: 1.2em;
     display: inline-block;
     box-sizing: border-box;
     resize: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+
 }
 
 textarea::-webkit-scrollbar { 
@@ -60,13 +59,10 @@ ul{
 
 img{
     width: 100%;
+    height: 100%;
+
 }
 /* ===== common class ======================= */
-.container{
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-}
 
 .btn{
     width: 100%;
@@ -127,6 +123,11 @@ img{
 }
 .child{
     flex:1;
+}
+.f-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bag-danger{
@@ -195,7 +196,7 @@ img{
 .content{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    
 }
 .sidebar{
     display: inline-block;
@@ -212,9 +213,7 @@ img{
 }
 .center{
     width: 90%;
-    margin: 0 auto;
-    margin-top: 20px;
-    height: 5000px;
+    margin: 20px auto;
 }
 
 
@@ -252,13 +251,10 @@ img{
 }
 .navbar li{
     flex: 1;
-    display: inline-block;
-    padding: 8px 10px 8px 10px;
-    text-decoration: none;
     margin-right: 5px;
-    cursor: pointer;
-    text-align-last: center;
-    transition: 0.3s;
+}
+.navbar li:last-child{
+    margin-right: 0;
 }
 
 .navbar li:hover{
@@ -268,7 +264,12 @@ img{
 }
 
 .navbar a{
-    display:inline-block;
+    display: inline-block;
+    padding: 8px 10px 8px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align-last: center;
+    transition: 0.3s;
     width:100%;
     color: inherit;
 }
@@ -383,7 +384,80 @@ img{
     background-color: #3C3A4E;
 }
 
-/* ===== media queries ================================================= */
+/* ===== redFlag post css ============================= */
+.posts{
+    margin-top: 20px;
+}
+.image-video-container{
+    width: 100%;
+    position: relative;
+}
+
+.posts .card{
+    margin-bottom: 20px;
+}
+.display-btn{
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.d-left{
+    left:0;
+}
+.d-right{
+    right:0;
+}
+.user-data{
+    width: 100%;
+    height: 60px;
+    padding: 5px 15px;
+}
+
+.user-image{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.user-names-time{
+    flex:2;
+}
+
+.desc{
+    padding: 15px;
+}
+.comment-status{
+    height: 50px;
+    border-top: 2px solid #ccc;
+}
+.comment-status .child:first-child{
+    border-right: 2px solid #ccc;
+}
+.comment-status .child:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #91509C;
+}
+
+
+
+/* ===== error content =========================*/
+.error-content{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== media queries ============= media queries================= media queries ================ */
 @media only screen and (max-width: 520px) {
     .about .column{
         flex-direction: row;
@@ -408,7 +482,7 @@ img{
     
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 820px) {
 
     /* ===== common class ==================================== */
     .l-hide{
@@ -420,17 +494,23 @@ img{
 
     /* ===== layout ======================================= */
     .header{
-        position: fixed;
+        flex-direction: row;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+        height: 10%;
     }
     .content{
         flex-direction: row;
+        width: 50%;
+        margin: 0 auto;
     }
     .sidebar{
         display: inline-block;
         width: 17%;
         height: 100vh;
         position: fixed;
-        
+        left: 0;
     }
 
     .notifications{
@@ -443,17 +523,10 @@ img{
     }
     .center{
         flex: 1;
-        max-width: 600px;
-        height: 5000px;
+        max-width: 500px;
     }
     /* ===== navbar ======================================*/
-    .header{
-        flex-direction: row;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0px;
-        height: 10%;
-    }
+    
     .brand{
         display: inline-block;
         margin-right: 20px;
