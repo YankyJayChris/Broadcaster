@@ -1,7 +1,7 @@
 let Notification = {
   render: async () => {
     return /*html*/ `
-        <div class="notifications">
+        <div class="map-container">
         
         </div>
         `;

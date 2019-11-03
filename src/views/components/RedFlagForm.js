@@ -4,25 +4,32 @@ let RedFlagForm = {
             <div class="card create-redflag">
                 <form id="create-form-redflag" >
                     <div class="row image-video">
-                        <div class="child">
-                            <i class="fa fa-edit"></i> 
-                            <h3 class="s-hide">Create red-flag</h3>
+                        <div class="child"> 
+                            <span class="dropdown">
+                                <select>
+                                    <option>Red-flag</option>
+                                    <option>intervation</option>  
+                                </select>
+                            </span> 
                         </div>
-                        <div class="child link">
+                        <div class="child link f-center">
                             <i class="fa fa-images"></i> 
                             <span class="s-hide"> Add images</span>
                             <span class="l-hide">images</span>
                             <input class="hide" id="imagefiles" type="file" />
                         </div>
-                        <div class="child link">
+                        <div class="child link f-center">
                             <i class="fa fa-file-video"></i> 
                             <span class="s-hide"> Add Videos</span>
                             <span class="l-hide">Videos</span>
                             <input class="hide" id="videofiles" type="file" />
                         </div>
                     </div>
+                    <div class="title">
+                        <input type="text" placeholder="Title for your Red-flag or intervation">
+                    </div>
                     <div class="description">
-                        <textarea name="description" placeholder="Create a red-flag or intervation" class="description full-with" ></textarea>
+                        <textarea name="description" placeholder="description for your red-flag or intervation" class="description full-with" ></textarea>
                     </div>
                     <div class="row location-tags">
                         <div class="child link">

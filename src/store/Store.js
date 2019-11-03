@@ -8,7 +8,7 @@ export default class Store {
   get value() {
     return this.state;
   }
-
+  // this function is fro component which will be used to subscribe to the store
   subscribe(fn) {
     this.subscribers = [...this.subscribers, fn];
     fn(this.value);
@@ -16,7 +16,7 @@ export default class Store {
       this.subscribers = this.subscribers.filter(sub => sub !== fn);
     };
   }
-
+  // this function help to dispatch action 
   dispatch(action) {
     this.state = this.reduce(this.state, action);
     this.subscribers.forEach(fn => fn(this.value));

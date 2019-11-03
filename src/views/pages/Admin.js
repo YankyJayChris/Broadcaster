@@ -8,12 +8,12 @@ let Feed = {
     let DashboradFeed = await Dashborad.render();
     let NotificationFeed = await Notification.render();
     return /*html*/ `
-            <div class="content">
+            <div class="admin-page">
                ${SidebarFeed} 
-               <div class="center">
+               <div class="admin-center">
                     ${DashboradFeed}
                </div>
-               ${NotificationFeed}
+
             </div>
         `;
   },
@@ -21,7 +21,6 @@ let Feed = {
   events: async () => {
     Sidebar.events();
     Dashborad.events();
-    Notification.events();
   }
 };
 

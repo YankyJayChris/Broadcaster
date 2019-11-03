@@ -38,8 +38,8 @@ let Home = {
                 ${SidebarHome} 
                 <div class="center">
                     ${RedFlagFormHome}
-                    <div class="column posts">  
-                        ${output}
+                    <div class="posts">
+                      ${output}
                     </div>
                 </div>
                 <div class="s-hide">
