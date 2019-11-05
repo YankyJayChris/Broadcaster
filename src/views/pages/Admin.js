@@ -1,12 +1,10 @@
 import Sidebar from "../components/Sidebar.js";
-import Notification from "./../components/Notification.js";
 import Dashborad from "./../components/Dashborad.js";
 
 let Feed = {
   render: async () => {
     let SidebarFeed = await Sidebar.render();
     let DashboradFeed = await Dashborad.render();
-    let NotificationFeed = await Notification.render();
     return /*html*/ `
             <div class="admin-page">
                ${SidebarFeed} 

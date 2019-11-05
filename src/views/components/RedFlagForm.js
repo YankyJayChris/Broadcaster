@@ -33,7 +33,7 @@ let RedFlagForm = {
                     </div>
                     <div class="row location-tags">
                         <div class="child link">
-                           <input type="text" placeholder="Add Location coordinates">   
+                           <input type="text" placeholder="Add coordinates">   
                         </div>
                         <div class="child link">
                             <div>

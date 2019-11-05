@@ -58,13 +58,13 @@ let Cards = {
       function mySlider(el,index){
 
         const images = el.querySelectorAll(".image-video-container");
-        console.log(images);
+        // console.log(images);
         if(!images){
             return;
         }else{
             const btn = el.querySelectorAll(".display-btn");
             const counter = el.querySelector(".counter");
-            console.log(btn);
+            // console.log(btn);
             let slideIndex= 1;
             counter.innerHTML = `${slideIndex}/${images.length}`;
             for(let j=0; j< btn.length; j++){
@@ -74,7 +74,7 @@ let Cards = {
                     let clickedBtn = e.target.getAttribute("data-var");
                     slideIndex += parseInt(clickedBtn);
                     
-                    console.log(slideIndex);
+                    // console.log(slideIndex);
                     if (slideIndex > images.length) {
                       slideIndex = 1;
                     }

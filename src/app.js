@@ -5,6 +5,7 @@ import Error404 from "./views/pages/Error404.js";
 import Home from './views/pages/Home.js';
 import Feed from './views/pages/Feed.js';
 import Admin from './views/pages/Admin.js';
+import MyMap from './views/components/Map.js';
 
 // import components
 import Header from "./views/components/Header.js";
@@ -19,7 +20,8 @@ const routes = {
   "/red-flag/:id":RedFlag,
   "/home": Home,
   "/feed": Feed,
-  "/admin": Admin
+  "/admin": Admin,
+  "/map": MyMap
 };
 
 

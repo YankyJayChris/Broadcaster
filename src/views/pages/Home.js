@@ -1,5 +1,5 @@
 import Sidebar from "../components/Sidebar.js"
-import Notification from './../components/Notification.js';
+import myMap from '../components/Map.js';
 import RedFlagForm from './../components/RedFlagForm.js';
 import Cards from '../components/Cards.js';
 
@@ -29,7 +29,6 @@ let Home = {
     // getting some components to build the UI
     let SidebarHome = await Sidebar.render();
     let RedFlagFormHome = await RedFlagForm.render();
-    let NotificationHome = await Notification.render();
     const output = await Cards.render(posts);
 
     // building the component
@@ -42,8 +41,8 @@ let Home = {
                       ${output}
                     </div>
                 </div>
-                <div class="s-hide">
-                    ${NotificationHome}
+                <div id="map-container" class="map-container">
+                    ${await myMap.render()}
                 </div>
             </div>`;
     return view;
@@ -52,8 +51,8 @@ let Home = {
   events: async () => {
     await Sidebar.events();
     await RedFlagForm.events();
-    await Notification.events();
     await Cards.events();
+    await myMap.events();
   }
 };
 
