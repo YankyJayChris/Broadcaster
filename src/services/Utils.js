@@ -22,7 +22,7 @@ const Utils = {
     return request;
   },
   routeTo: route => {
-    window.location.href = `/#${route}`;
+    window.location.href = `${route}`;
   },
   isLoged: () => {
     return false;

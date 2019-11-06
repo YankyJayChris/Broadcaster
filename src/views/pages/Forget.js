@@ -20,7 +20,7 @@ let Login = {
                         </div>
                         <input class="btn" type="submit" value="submit"/>
                         <div class="call-out">
-                            <span>My account <a href="#" class="link signup-link">Login</a></span>
+                            <span>My account <a href="/Broadcasterapp/#/" class="link signup-link">Login</a></span>
                         </div>
                     </form>
                 </div>

@@ -18,9 +18,9 @@ let Header = {
                 </div>
                 <nav class="navbar">
                     <ul>
-                        <li class=${url.url == "/home" ? "active" : ""}><a href="/#/home"><span class="s-hide">Home</span> <i class="fa fa-home l-hide"></i></a></li>
-                        <li class=${url.url == "/feed" ? "active" : ""}><a href="/#/feed"><span class="s-hide">Feed</span> <i class="fa fa-newspaper l-hide"></i></a></li>
-                        <li class=${url.url == "/admin" ? "active" : ""}><a href="/#/admin"><span class="s-hide">Admin</span> <i class="fas fa-th-list l-hide"></i></a></li>
+                        <li class=${url.url == "/home" ? "active" : ""}><a href="/Broadcasterapp/#/home"><span class="s-hide">Home</span> <i class="fa fa-home l-hide"></i></a></li>
+                        <li class=${url.url == "/feed" ? "active" : ""}><a href="/Broadcasterapp/#/feed"><span class="s-hide">Feed</span> <i class="fa fa-newspaper l-hide"></i></a></li>
+                        <li class=${url.url == "/admin" ? "active" : ""}><a href="/Broadcasterapp/#/admin"><span class="s-hide">Admin</span> <i class="fas fa-th-list l-hide"></i></a></li>
                         <li class="${url.url == "/map" ? "active" : ""} l-hide go-map"><a href="#"><span class="s-hide">Map</span> <i class="fas fa-map-marked-alt l-hide"></i></a></li>
                         
                     </ul>
@@ -30,8 +30,6 @@ let Header = {
   events: async () => {
       document.querySelector('.go-map').addEventListener('click',(e)=>{
           e.preventDefault();
-        //   window.location.hash = "map-container";
-        //   location.href = "/#/home/#map-container";
           document.getElementById("map-container").scrollIntoView();
       })
   }
