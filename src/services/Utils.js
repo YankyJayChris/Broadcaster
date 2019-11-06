@@ -28,8 +28,7 @@ const Utils = {
     return false;
   },
 
-  gmap: async (el, userLocation, getLocation) => {
-    getLocation();
+  gmap: async (el, userLocation) => {
     let lat = userLocation.lat;
     let lng = userLocation.lng;
     console.log(lat, lng);
