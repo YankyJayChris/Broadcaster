@@ -19,6 +19,7 @@ let MyMap = {
         let lng = 30.0606;
         let findMe = document.querySelector(".find-me");
         let coord = document.querySelector(".coord");
+        
         function getLocation() {
             if(navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
@@ -38,11 +39,11 @@ let MyMap = {
         }
         const userLocation = { lat: lat, lng: lng };
         console.log("user",userLocation);
+        findMe.click();
         await LoadMap.load("map", userLocation);
         
         findMe.addEventListener('click',()=>{
             getLocation();
-            
         });
   }
 };

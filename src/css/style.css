@@ -543,12 +543,12 @@ img{
 }
 .admin-center{
     flex: 1;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     padding: 0 20px;
 }
 
 
-/* map style */
+/* ===== map style ==========================*/
 #map{
     width: 100%;
     height: 100%;
@@ -707,7 +707,7 @@ img{
         
     }
     /* ====== admin page ========*/
-    .admin-page{
+    .admin-center{
         display: flex;
         flex-direction: row;
         margin: 20px 5% 0 20%;

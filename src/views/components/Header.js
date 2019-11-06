@@ -30,7 +30,13 @@ let Header = {
   events: async () => {
       document.querySelector('.go-map').addEventListener('click',(e)=>{
           e.preventDefault();
-          document.getElementById("map-container").scrollIntoView();
+          let mapscroll = document.getElementById("map-container");
+          if(!mapscroll){
+            Utils.routeTo("/Broadcasterapp/#/Home");
+            document.getElementById("map-container").scrollIntoView();
+          }else{
+              document.getElementById("map-container").scrollIntoView();
+          }
       })
   }
 };
