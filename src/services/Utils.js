@@ -27,11 +27,12 @@ const Utils = {
   isLoged: () => {
     return false;
   },
-  
-  gmap: async (el,userLocation) =>{
+
+  gmap: async (el, userLocation, getLocation) => {
+    getLocation();
     let lat = userLocation.lat;
     let lng = userLocation.lng;
-    console.log(lat,lng);
+    console.log(lat, lng);
     let map = new window.google.maps.Map(document.getElementById(el), {
       center: new self.google.maps.LatLng(lat, lng),
       zoom: 16,
@@ -41,33 +42,33 @@ const Utils = {
     const marker = new window.google.maps.Marker({
       position: userLocation,
       map: map,
-      icon:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+      icon:
+        "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
     });
 
     // info window
-    const infowindow =  new window.google.maps.InfoWindow({
-      content:"<h1>my info</h1>"
+    const infowindow = new window.google.maps.InfoWindow({
+      content: "<h1>my info</h1>"
     });
 
-    marker.addListener("click",()=>{
-      infowindow.open(map,marker);
-    })
-    
+    marker.addListener("click", () => {
+      infowindow.open(map, marker);
+    });
   },
   maphelper: async () => {
-
     const appendChild = Element.prototype.appendChild;
 
- 
     const urlCatchers = [
       "/AuthenticationService.Authenticate?",
       "/QuotaService.RecordEvent?"
     ];
 
-   
-    Element.prototype.appendChild = function (element) {
-      const isGMapScript = element.tagName === 'SCRIPT' && /maps\.googleapis\.com/i.test(element.src);
-      const isGMapAccessScript = isGMapScript && urlCatchers.some(url => element.src.includes(url));
+    Element.prototype.appendChild = function(element) {
+      const isGMapScript =
+        element.tagName === "SCRIPT" &&
+        /maps\.googleapis\.com/i.test(element.src);
+      const isGMapAccessScript =
+        isGMapScript && urlCatchers.some(url => element.src.includes(url));
 
       if (!isGMapAccessScript) {
         return appendChild.call(this, element);
@@ -75,7 +76,6 @@ const Utils = {
       return element;
     };
   }
-  
 };
 
 export default Utils;

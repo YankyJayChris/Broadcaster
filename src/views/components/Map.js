@@ -38,7 +38,7 @@ let MyMap = {
         }
         const userLocation = { lat: lat, lng: lng };
         console.log("user",userLocation);
-        await LoadMap.load("map",userLocation);
+        await LoadMap.load("map", userLocation, getLocation);
         
         findMe.addEventListener('click',()=>{
             getLocation();
