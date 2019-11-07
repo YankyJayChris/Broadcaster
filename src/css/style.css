@@ -572,6 +572,9 @@ img{
   background-color: #91509C;
   color: white;
 }
+.overflow{
+    overflow-x: scroll;
+}
 
 /* ===== single redflag ======= */
 .red-flag{

@@ -30,7 +30,7 @@ let Cards = {
                        <span class="dropdown">
                             <select>
                                 <option>Edit</option>
-                                <option>Delete</option>  
+                                <option>Delete</option>
                             </select>
                         </span>
                     </div>
@@ -38,6 +38,7 @@ let Cards = {
                 <div class="desc ">
                     <h2>${post.title}</h2>
                     <p class="ellipsis">${post.body}</p>
+                    <h3 class="m-top">location: -1.9489, 30.1015</h3>
                 </div>
                 <div class="row comment-status">
                     <a href="/Broadcasterapp/#/red-flag/${post.id}" class="comment-btn child f-center"><h3>Read more</h3></a>

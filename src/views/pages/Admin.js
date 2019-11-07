@@ -30,17 +30,17 @@ let Admin = {
                ${SidebarAdmin} 
                <div class="admin-center">
                     ${DashboradAdmin}
-                    <div class="card m-top">
-                    <table id="admin-table">
-                    <tr>
-                        <th>#</th>
-                        <th>Title</th>
-                        <th>Type</th>
-                        <th>Location</th>
-                        <th>View</th>
-                    </tr>
-                      ${await AdminTable.render(posts)}
-                    </table>
+                    <div class="card m-top overflow">
+                      <table id="admin-table">
+                      <tr>
+                          <th>#</th>
+                          <th>Title</th>
+                          <th>Type</th>
+                          <th>Location</th>
+                          <th>View</th>
+                      </tr>
+                        ${await AdminTable.render(posts)}
+                      </table>
                    </div> 
                </div>
 

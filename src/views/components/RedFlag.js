@@ -55,13 +55,14 @@ let RedFlag = {
                         </span>
                     </div>
                 </div>
+                <div class="row comment-status">
+                    <div class="comment-btn child f-center"><h3>location: -1.9489, 30.1015</h3></div>
+                    <div class="comment-btn child f-center"><h3>Status: Draft</h3></div>
+                </div>
                 <div class="desc ">
                     <h2>${post.title}</h2>
                     <p>${post.body}</p>
-                </div>
-                <div class="row comment-status">
-                    <div class="comment-btn child f-center"><h3>Comment</h3></div>
-                    <div class="comment-btn child f-center"><h3>Status: Draft</h3></div>
+                    
                 </div>
             </div>
             </div>
