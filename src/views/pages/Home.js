@@ -8,19 +8,12 @@ import Cards from '../components/Cards.js';
 import {store} from "../../store/index.js";
 import { getRedFlag } from "../../store/actions/RedFlagAction.js";
 
-// state of this component
-// this will help presist the data so that when a user navigate somewhere else to keep the data
-let posts;
+
 
 // main component which is an object with some propeties
 let Home = {
   render: async () => {
-      if(!posts){
-        //   preventing the the getRedflag to be called when it have been called
-          await getRedFlag();
-        //   post must be undefined
-          console.log(posts);
-      }
+      let posts;
     //   subscribing to the store to get data when there is any changed 
     store.subscribe(newState => {
       posts= newState.redFlags.data;

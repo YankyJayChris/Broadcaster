@@ -4,8 +4,12 @@ let AdminTable = {
       .map((post,index) => {
           
         return ` <tr>
-                    <td>${index+1}</td>
-                    <td>${post.title}</td>
+                    <td>${index + 1}</td>
+                    <td>
+                        <a href="/Broadcasterapp/#/red-flag/${post.id}"  class="link">
+                            ${post.title}
+                        </a>
+                    </td>
                     <td>REd-flag</td>
                     <td>-1.9489, 30.1015</td>
                     <td>

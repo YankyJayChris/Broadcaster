@@ -38,10 +38,9 @@ let Cards = {
                 <div class="desc ">
                     <h2>${post.title}</h2>
                     <p class="ellipsis">${post.body}</p>
-                    <span class="link">read more..</span>
                 </div>
                 <div class="row comment-status">
-                    <div class="comment-btn child f-center"><h3>Comment</h3></div>
+                    <a href="/Broadcasterapp/#/red-flag/${post.id}" class="comment-btn child f-center"><h3>Read more</h3></a>
                     <div class="comment-btn child f-center"><h3>Status: Draft</h3></div>
                 </div>
             </div>`

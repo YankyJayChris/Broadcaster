@@ -9,16 +9,11 @@ import { getRedFlag } from "../../store/actions/RedFlagAction.js";
 
 // state of this component
 // this will help presist the data so that when a user navigate somewhere else to keep the data
-let feeds;
 
 let Feed = {
   render: async posts => {
-    if (!feeds) {
-      //   preventing the the getRedflag to be called when it have been called
-      await getRedFlag();
-      //   post must be undefined
-      console.log(feeds);
-    }
+    
+    let feeds;
     //   subscribing to the store to get data when there is any changed
     store.subscribe(newState => {
       feeds = newState.redFlags.data;

@@ -573,6 +573,13 @@ img{
   color: white;
 }
 
+/* ===== single redflag ======= */
+.red-flag{
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
 
 /* ===== map style ==========================*/
 #map{
