@@ -179,7 +179,9 @@ img{
     justify-content: center;
     align-items: center;
 }
-
+.m-top {
+    margin-top: 20px;
+}
 .bag-danger{
     border-radius: 40%;
     background-color: #fd1d3b;
@@ -544,7 +546,31 @@ img{
 .admin-center{
     flex: 1;
     /* margin-top: 20px; */
+    flex-direction: column;
     padding: 0 20px;
+}
+
+#admin-table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#admin-table td, #admin-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#admin-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#admin-table tr:hover {background-color: #ddd;}
+
+#admin-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #91509C;
+  color: white;
 }
 
 
@@ -709,7 +735,7 @@ img{
     /* ====== admin page ========*/
     .admin-center{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         margin: 20px 5% 0 20%;
     }
     
