@@ -16,6 +16,7 @@ let Login = {
                             <label for="email">Email</label>
                             <input
                             type="text"
+                            id="email"
                             class="f_input"
                             name="email"
                             placeholder="Your Email.."
@@ -25,6 +26,7 @@ let Login = {
                             <label for="password">password</label>
                             <input
                             type="password"
+                            id="password"
                             class="f_input"
                             name="password"
                             placeholder="Your password"
