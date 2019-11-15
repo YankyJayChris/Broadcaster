@@ -23,7 +23,7 @@ const Utils = {
   },
   routeTo: route => {
     window.location.href = `${route}`;
-  },
+  }
 };
 
 export default Utils;

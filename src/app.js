@@ -1,14 +1,21 @@
 import Login from "./views/pages/Login.js";
+import Register from "./views/pages/Register.js";
+import Error404 from "./views/pages/Error404.js";
+
+
+
 // import components
 import Header from "./views/components/Header.js";
-
 
 
 import Utils from './services/Utils.js'
 
 const routes = {
   "/": Login,
+  "/register": Register,
 };
+
+
 // The router 
 const router = async () => {
 
@@ -30,8 +37,7 @@ const router = async () => {
   if (
     parsedURL == "/" ||
     parsedURL == "" ||
-    parsedURL == "/register" ||
-    parsedURL == "/forget"
+    parsedURL == "/register"
   ) {
     header.classList.add("hide");
     footer.classList.add("hide");
