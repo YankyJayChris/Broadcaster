@@ -1,6 +1,7 @@
 import Login from "./views/pages/Login.js";
 import Register from "./views/pages/Register.js";
 import Error404 from "./views/pages/Error404.js";
+import Home from './views/pages/Home.js';
 
 
 
@@ -13,6 +14,7 @@ import Utils from './services/Utils.js'
 const routes = {
   "/": Login,
   "/register": Register,
+  "/home": Home
 };
 
 
