@@ -9,6 +9,7 @@ import Admin from './views/pages/Admin.js';
 
 // import components
 import Header from "./views/components/Header.js";
+import RedFlag from "./views/components/RedFlag.js";
 
 
 import Utils from './services/Utils.js'
@@ -18,7 +19,8 @@ const routes = {
   "/register": Register,
   "/home": Home,
   "/feed": Feed,
-  "/admin": Admin
+  "/admin": Admin,
+  "/red-flag/:id":RedFlag
 };
 
 

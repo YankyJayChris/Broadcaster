@@ -13,7 +13,7 @@ let Header = {
                         <input type="text" placeholder="Search Red-flag or intervation">
                     </div>
                     <div class="not-icon l-hide">
-                        <img src="http://127.0.0.1:5501/src/assets/logo.png" alt="logo">    
+                        <img src="./src/assets/logo.png" alt="logo">    
                     </div>
                 </div>
                 <nav class="navbar">
