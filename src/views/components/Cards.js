@@ -1,7 +1,7 @@
 let Cards = {
 
   render: async () => {
-      let posts = [{id:1,title:"hey my name is me and i like coding", body:"let try this and see if it can work well hhahahahah"}]
+      let posts = [{id:1,title:"hey my name is me and i like coding", body:"let try this and see if it can work well hhahahahah"}];
     let view = posts
       .map(
         post => `
