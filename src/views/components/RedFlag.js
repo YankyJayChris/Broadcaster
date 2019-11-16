@@ -1,11 +1,23 @@
-let Cards = {
 
+
+let posts;
+
+let RedFlag = {
   render: async () => {
-      let posts = [{id:1,title:"hey my name is me and i like coding", body:"let try this and see if it can work well hhahahahah"}];
-    let view = posts
-      .map(
-        post => `
-            <div class="card column my-slider">
+
+      let post = {
+        id:1,
+        title:"hey my name is me and i like coding", 
+        body:"let try this and see if it can work well hhahahahah"
+    };
+    // let request = Utils.getURL();
+    // post = posts.filter(post => post.id == request.id)[0];
+    console.log(post);
+    let view;
+    if(post){
+        view = /*html*/ `
+            <div class="red-flag card">
+                <div class="card column my-slider">
                 <div class="image-video-container  ${post.id}">
                     <img class="myslide" src="https://images.pexels.com/photos/3136078/pexels-photo-3136078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="redflag-image">
                 </div>
@@ -32,40 +44,48 @@ let Cards = {
                        <span class="dropdown">
                             <select>
                                 <option>Edit</option>
-                                <option>Delete</option>
+                                <option>Delete</option>  
                             </select>
                         </span>
                     </div>
                 </div>
-                <div class="desc ">
-                    <h2>${post.title}</h2>
-                    <p class="ellipsis">${post.body}</p>
-                    <h3 class="m-top">location: -1.9489, 30.1015</h3>
-                </div>
                 <div class="row comment-status">
-                    <a href="/#/red-flag/${post.id}" class="comment-btn child f-center"><h3>Read more</h3></a>
+                    <div class="comment-btn child f-center"><h3>location: -1.9489, 30.1015</h3></div>
                     <div class="comment-btn child f-center"><h3>Status: Draft</h3></div>
                 </div>
-            </div>`
-      )
-      .join("\n");
-
-    return view;
+                <div class="desc ">
+                    <h2>${post.title}</h2>
+                    <p>${post.body}</p>
+                    
+                </div>
+            </div>
+            </div>
+        `;
+    }else{
+        view = /*html*/ `
+            <div class="content">
+              <div class="error-content">
+                <h1> ID Error</h1>
+                <p>This page does't exist please <a class="link" href="/Broadcasterapp/#/feed">go to Feed</a></p>
+              </div>
+            </div>
+        `;
+    }
+ 
+        return view;
   },
+  // All the code related to DOM interactions and controls
   events: async () => {
-      const selector = document.querySelectorAll(".my-slider");
+      const selector = document.querySelector(".my-slider");
 
-      selector.forEach(mySlider);
 
-      function mySlider(el,index){
-
-        const images = el.querySelectorAll(".image-video-container");
+        const images = selector.querySelectorAll(".image-video-container");
         // console.log(images);
         if(!images){
             return;
         }else{
-            const btn = el.querySelectorAll(".display-btn");
-            const counter = el.querySelector(".counter");
+            const btn = selector.querySelectorAll(".display-btn");
+            const counter = selector.querySelector(".counter");
             // console.log(btn);
             let slideIndex= 1;
             counter.innerHTML = `${slideIndex}/${images.length}`;
@@ -93,7 +113,8 @@ let Cards = {
             }
            
         }
-      }
+
   }
 };
-export default Cards;
+
+export default RedFlag;
