@@ -556,6 +556,10 @@ img{
   width: 100%;
 }
 
+.table-title{
+    margin: 10px;
+}
+
 #admin-table td, #admin-table th {
   border: 1px solid #ddd;
   padding: 8px;

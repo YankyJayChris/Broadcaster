@@ -3,6 +3,7 @@ import Register from "./views/pages/Register.js";
 import Error404 from "./views/pages/Error404.js";
 import Home from './views/pages/Home.js';
 import Feed from './views/pages/Feed.js';
+import Admin from './views/pages/Admin.js';
 
 
 
@@ -16,7 +17,8 @@ const routes = {
   "/": Login,
   "/register": Register,
   "/home": Home,
-  "/feed": Feed
+  "/feed": Feed,
+  "/admin": Admin
 };
 
 

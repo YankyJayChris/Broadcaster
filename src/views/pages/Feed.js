@@ -5,7 +5,7 @@ import Dashborad from './../components/Dashborad.js';
 
 
 let Feed = {
-  render: async posts => {
+  render: async () => {
 
     // getting some components to build the UI
     let SidebarHome = await Sidebar.render();
