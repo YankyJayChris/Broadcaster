@@ -1,6 +1,7 @@
 import Sidebar from "../components/Sidebar.js"
 import RedFlagForm from './../components/RedFlagForm.js';
 import Cards from '../components/Cards.js';
+import myMap from '../components/Map.js';
 
 
 // main component which is an object with some propeties
@@ -23,6 +24,7 @@ let Home = {
                     </div>
                 </div>
                 <div id="map-container" class="map-container">
+                  ${await myMap.render()}
                 </div>
             </div>`;
     return view;
@@ -32,6 +34,7 @@ let Home = {
     await Sidebar.events();
     await RedFlagForm.events();
     await Cards.events();
+    await myMap.events();
   }
 };
 

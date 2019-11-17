@@ -1,7 +1,4 @@
 
-
-let posts;
-
 let RedFlag = {
   render: async () => {
 

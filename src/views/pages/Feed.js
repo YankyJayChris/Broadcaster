@@ -1,6 +1,7 @@
 import Sidebar from "../components/Sidebar.js";
 import Cards from "../components/Cards.js";
 import Dashborad from './../components/Dashborad.js';
+import myMap from '../components/Map.js';
 
 
 
@@ -23,7 +24,7 @@ let Feed = {
                     </div>
                 </div>
                 <div id="map-container" class="s-hide map-container">
-                    
+                  ${await myMap.render()}
                 </div>
             </div>`;
     return view;
@@ -33,6 +34,7 @@ let Feed = {
     await Sidebar.events();
     await Cards.events();
     await Dashborad.events();
+    await myMap.events();
   }
 };
 
