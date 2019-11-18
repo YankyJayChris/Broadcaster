@@ -1,14 +1,23 @@
+import Utils from "./../../services/Utils.js";
+
+// importing store and actions
+import {store} from "../../store/index.js";
+
+let posts;
 
 let RedFlag = {
   render: async () => {
 
-      let post = {
-        id:1,
-        title:"hey my name is me and i like coding", 
-        body:"let try this and see if it can work well hhahahahah"
-    };
-    // let request = Utils.getURL();
-    // post = posts.filter(post => post.id == request.id)[0];
+    let post;
+    // get id from url
+    let request = Utils.getURL();
+
+    //   subscribing to the store to get data when there is any changed
+    store.subscribe(newState => {
+      posts = newState.redFlags.data;
+      console.log(posts);
+    });
+    post = posts.filter(post => post.id == request.id)[0];
     console.log(post);
     let view;
     if(post){
@@ -53,7 +62,6 @@ let RedFlag = {
                 <div class="desc ">
                     <h2>${post.title}</h2>
                     <p>${post.body}</p>
-                    
                 </div>
             </div>
             </div>
@@ -74,7 +82,6 @@ let RedFlag = {
   // All the code related to DOM interactions and controls
   events: async () => {
       const selector = document.querySelector(".my-slider");
-
 
         const images = selector.querySelectorAll(".image-video-container");
         // console.log(images);

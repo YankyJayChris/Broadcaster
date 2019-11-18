@@ -71,7 +71,7 @@ const Utils = {
       }
       return element;
     };
-  },
+  }
 };
 
 export default Utils;

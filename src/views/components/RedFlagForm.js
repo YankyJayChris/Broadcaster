@@ -22,7 +22,7 @@ let RedFlagForm = {
                             <i class="fa fa-file-video"></i> 
                             <span class="s-hide"> Add Videos</span>
                             <span class="l-hide">Videos</span>
-                            <input class="hide" id="videofiles" type="file" />
+                            <input class="hide" id="videofiles" type="file" accept="video/mp4,video/x-m4v,video/*"/>
                         </div>
                     </div>
                     <div class="title">

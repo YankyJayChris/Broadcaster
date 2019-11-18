@@ -11,6 +11,8 @@ import Admin from './views/pages/Admin.js';
 import Header from "./views/components/Header.js";
 import RedFlag from "./views/components/RedFlag.js";
 
+import { getRedFlag } from "./store/actions/RedFlagAction.js";
+
 
 import Utils from './services/Utils.js'
 
@@ -23,10 +25,10 @@ const routes = {
   "/red-flag/:id":RedFlag
 };
 
-
 // The router 
 const router = async () => {
 
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   // Get the parsed URl from the addressbar
   let request = Utils.getURL();
   console.log(request);
@@ -40,8 +42,9 @@ const router = async () => {
   // Parse the URL and if it has an id part, change it with the string ":id"
   let parsedURL = `${request.resource ? "/" + request.resource : "/"}${
     request.id ? "/:id" : ""
-  }${request.verb ? "/" + request.verb : ""}`;
+  }`;
 
+  // checking if is the login page /signup so that the header will not be rended
   if (
     parsedURL == "/" ||
     parsedURL == "" ||
@@ -58,7 +61,7 @@ const router = async () => {
 
   // checking if route is supported and add to the dom the correct component
   let page = routes[parsedURL] ? routes[parsedURL] : Error404;
-  console.log(page);
+  // console.log(page);
   appContent.innerHTML = await page.render();
   await page.events();
 };

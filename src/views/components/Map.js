@@ -31,14 +31,16 @@ let MyMap = {
                 lng = position.coords.longitude;
                 console.log(lat,lng);
                 coord.innerHTML = `Coordinates: ${parseFloat(lat).toFixed(4)}, ${parseFloat(lng).toFixed(4)}`;
+                // loading the map
+                Utils.gmap("map", userLocation);
+                Utils.maphelper();
             }
             function geoError() {
               alert("Geocoder failed.");
                coord.innerHTML = "Geocoder not surpoted.";
             }
         }
-        findMe.click();
-        const userLocation = { lat: lat, lng: lng };
+        const userLocation = { lat:lat, lng:lng };
         console.log("user",userLocation);
 
         // loading the map
@@ -47,7 +49,7 @@ let MyMap = {
         
         findMe.addEventListener('click',()=>{
             getLocation();
-        });
+        });;
   }
 };
 export default MyMap;
