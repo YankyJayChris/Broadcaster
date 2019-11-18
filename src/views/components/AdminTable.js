@@ -1,6 +1,6 @@
 let AdminTable = {
-  render: async () => {
-    let posts = [{id:1,title:"hey my name is me and i like coding", body:"let try this and see if it can work well hhahahahah"}];
+  render: async (data) => {
+    let posts = data;
     let view = posts
       .map((post,index) => {
           

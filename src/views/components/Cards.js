@@ -1,7 +1,16 @@
+import Utils from "./../../services/Utils.js";
+
+// importing store and actions
+import {store} from "../../store/index.js";
+
+import {getRedFlag} from "../../store/actions/RedFlagAction.js";
+
 let Cards = {
 
-  render: async () => {
-      let posts = [{id:1,title:"hey my name is me and i like coding", body:"let try this and see if it can work well hhahahahah"}];
+  render: async (data) => {
+    let posts= data;
+    // posts = [{id:1,title:"hey my name is me and i like coding", body:"let try this and see if it can work well hhahahahah"}];
+
     let view = posts
       .map(
         post => `
